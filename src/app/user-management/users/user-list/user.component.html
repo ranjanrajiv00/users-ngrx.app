@@ -1,0 +1,30 @@
+<button type="button" class="btn btn-default" [routerLink]="['/details','new']">Add</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>DOB</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>Street</th>
+        <th>Number</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | async">
+        <td>{{user.name}}, {{user.surname}}</td>
+        <td>{{user.birthDate}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.street}}</td>
+        <td>{{user.number}}</td>
+        <td>
+            <button type="button" class="btn btn-default" [routerLink]="['/details',user.id]">Edit
+            </button>
+            <button type="button" class="btn btn-default" (click)="delete(user)">Delete
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

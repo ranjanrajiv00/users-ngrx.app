@@ -1,0 +1,45 @@
+<form [formGroup]="userForm" (ngSubmit)="save()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>First Name</label>
+            <input type="text" class="form-control" placeholder="First Name" formControlName="name">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Last Name</label>
+            <input type="text" class="form-control" placeholder="Last Name" formControlName="surname">
+        </div>
+
+    </div>
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" placeholder="City" formControlName="city">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Street</label>
+            <input type="text" class="form-control" placeholder="Street" formControlName="street">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>DOB</label>
+            <input type="text" class="form-control" placeholder="DOB" formControlName="birthDate">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Phone</label>
+            <input type="text" class="form-control" placeholder="Phone" formControlName="phone">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Number</label>
+            <input type="text" class="form-control" placeholder="Number" formControlName="number">
+        </div>
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-default">Save</button>
+    <button type="submit" class="btn btn-default" [routerLink]="['/user']">Back</button>
+</form>
